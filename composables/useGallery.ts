@@ -5,19 +5,19 @@ interface GalleryMedia {
 }
 
 export function useGallery() {
-  const media: GalleryMedia[] = [
+  const images: GalleryMedia[] = [
     {
-      url: 'https://images.unsplash.com/photo-1464983953574-0892a716854b',
+      url: '/images/1.jpeg',
       alt: 'Children planting seedlings',
       caption: 'Students in Kenya taking part in a Green Sprout tree-planting event.'
     },
     {
-      url: 'https://images.unsplash.com/photo-1506744038136-46273834b3fb',
+      url: '/images/2.jpeg',
       alt: 'Lush green forest',
       caption: 'A reforested area after community restoration efforts.'
     },
     {
-      url: 'https://images.unsplash.com/photo-1606788075761-4694c9b68ac7',
+      url: '/images/3.jpeg',
       alt: 'Volunteer watering a young tree',
       caption: 'Volunteers caring for saplings during early growth.'
     },
@@ -34,6 +34,6 @@ export function useGallery() {
   ];
 
   return {
-    media
+    images
   };
 }

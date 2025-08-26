@@ -1,18 +1,46 @@
 <template>
-  <div class="bg-green-50 p-6 rounded-lg shadow flex flex-col items-center">
-    <svg viewBox="0 0 320 360" class="w-64 h-64 mb-4" aria-labelledby="kenya-map">
-      <title id="kenya-map">Map of Kenya showing school project locations</title>
-      <path d="M90 40 L230 40 Q250 90 200 150 Q250 200 180 320 Q110 250 80 200 Q60 130 90 40Z" fill="#d1fae5" stroke="#047857" stroke-width="4"/>
-      <!-- Example locations-->
-      <circle cx="120" cy="110" r="8" fill="#10b981"/>
-      <text x="130" y="113" font-size="12" fill="#065f46">Green Valley School</text>
-      <circle cx="190" cy="200" r="8" fill="#10b981"/>
-      <text x="200" y="203" font-size="12" fill="#065f46">Sunrise Academy</text>
-      <circle cx="160" cy="260" r="8" fill="#10b981"/>
-      <text x="170" y="263" font-size="12" fill="#065f46">Nairobi Primary</text>
+  <div class="bg-gradient-to-r from-green-50 via-emerald-100 to-green-50 dark:from-gray-800 dark:via-gray-900 dark:to-gray-800 p-8 rounded-2xl shadow-lg flex flex-col items-center">
+    <h2 class="text-2xl font-extrabold text-green-800 dark:text-green-300 mb-6">Our Schools in Siaya County 🌱</h2>
+    
+    <svg viewBox="0 0 320 360" class="w-72 h-72 md:w-96 md:h-96 mb-6" aria-labelledby="kenya-map">
+      <title id="kenya-map">Map of Kenya with Siaya schools</title>
+      
+      <!-- Kenya Outline -->
+      <path 
+        d="M90 40 L230 40 Q250 90 200 150 Q250 200 180 320 Q110 250 80 200 Q60 130 90 40Z" 
+        fill="url(#kenyaGradient)" 
+        stroke="#047857" 
+        stroke-width="3"
+        class="transition-transform duration-500 hover:scale-105"
+      />
+
+      <!-- Gradient for Kenya -->
+      <defs>
+        <linearGradient id="kenyaGradient" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%" stop-color="#bbf7d0"/>
+          <stop offset="100%" stop-color="#34d399"/>
+        </linearGradient>
+      </defs>
+
+      <!-- Siaya Schools -->
+      <circle cx="140" cy="160" r="10" fill="#10b981" class="animate-pulse"/>
+      <text x="155" y="165" font-size="12" fill="#064e3b" class="font-semibold">Uyoma Primary</text>
+
+      <circle cx="150" cy="190" r="10" fill="#10b981" class="animate-pulse"/>
+      <text x="165" y="195" font-size="12" fill="#064e3b" class="font-semibold">Siaya Central School</text>
+
+      <circle cx="130" cy="220" r="10" fill="#10b981" class="animate-pulse"/>
+      <text x="145" y="225" font-size="12" fill="#064e3b" class="font-semibold">Lakeview Academy</text>
     </svg>
-    <div class="text-green-900 text-center">
-      <p class="font-bold text-green-700 mb-1">Our partner schools and project sites are spread across Kenya—expanding every year!</p>
+
+    <!-- Legend -->
+    <div class="bg-white dark:bg-gray-700 p-4 rounded-xl shadow-md w-full max-w-md">
+      <p class="text-green-800 dark:text-green-200 font-bold mb-2">📍 Partner Schools in Siaya:</p>
+      <ul class="space-y-1 text-gray-700 dark:text-gray-200">
+        <li>🌿 Uyoma Primary School</li>
+        <li>🌿 Siaya Central School</li>
+        <li>🌿 Lakeview Academy</li>
+      </ul>
     </div>
   </div>
 </template>

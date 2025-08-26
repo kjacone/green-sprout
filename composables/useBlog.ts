@@ -7,6 +7,7 @@ interface BlogPost {
   coverUrl: string;
   author: string;
   date: string;
+  slug: string;
 }
 
 export function useBlog() {
@@ -19,10 +20,9 @@ export function useBlog() {
     error.value = null;
     try {
       const response = await fetch('/api/blog');
-      if (!response.ok) {
-        throw new Error('Could not fetch blog posts');
-      }
+      if (!response.ok) throw new Error('Could not fetch blog posts');
       const data = await response.json();
+// console.log("posts", data);
       posts.value = Array.isArray(data) ? data : [];
     } catch (e: any) {
       error.value = e.message || 'An error occurred.';
@@ -31,13 +31,7 @@ export function useBlog() {
     }
   };
 
-  // Automatically fetch on mount
   onMounted(getLatestPosts);
 
-  return {
-    posts,
-    loading,
-    error,
-    getLatestPosts,
-  };
+  return { posts, loading, error, getLatestPosts };
 }

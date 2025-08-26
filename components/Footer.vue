@@ -1,29 +1,66 @@
 <template>
-  <footer class="bg-green-900 text-green-50 w-full px-4 py-8 mt-8">
-    <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 items-start">
+  <footer class="bg-green-900 dark:bg-green-950 text-green-50 w-full px-6 py-10 ">
+    <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-10">
+      <!-- Brand / About -->
+      <div>
+        <h2 class="text-2xl font-bold flex items-center gap-2">
+          Green Sprout Kenya <span class="text-lg">🌱</span>
+        </h2>
+        <p class="text-green-100 mt-2 text-sm leading-relaxed">
+          Restoring our environment and empowering communities one seed at a time.  
+        </p>
+      </div>
+
       <!-- Contact Info -->
-      <div class="mb-6 md:mb-0">
-        <h3 class="font-bold text-lg mb-2">Contact Us</h3>
-        <ul>
-          <li>Email: <a href="mailto:info@greensproutkenya.org" class="underline hover:text-green-200">info@greensproutkenya.org</a></li>
-          <li>Phone: <a href="tel:+254712345678" class="underline hover:text-green-200">+254 712 345 678</a></li>
-          <li>P.O. Box 1234, Nairobi, Kenya</li>
+      <div>
+        <h3 class="font-semibold text-lg mb-3">Contact Us</h3>
+        <ul class="space-y-2 text-green-100">
+          <li class="flex items-center gap-2">
+            📍 <span>Uyoma South Ward, Siaya County, Kenya</span>
+          </li>
+          <li class="flex items-center gap-2">
+            📞 <a href="tel:+254111596189" class="hover:text-green-300 underline">+254 111 596 189</a>
+          </li>
+          <li class="flex items-center gap-2">
+            ✉️ <a href="mailto:greensproutkenya@gmail.com" class="hover:text-green-300 underline">greensproutkenya@gmail.com</a>
+          </li>
         </ul>
       </div>
+
       <!-- Social Links -->
-      <div class="mb-6 md:mb-0">
-        <h3 class="font-bold text-lg mb-2">Follow Us</h3>
-        <SocialLinks />
-      </div>
-      <!-- Legal/Copyright -->
       <div>
-        <h3 class="font-bold text-lg mb-2">&copy; {{ new Date().getFullYear() }} Green Sprout Kenya</h3>
-        <p class="text-green-100 text-sm">All rights reserved.<br/>Empowering nature, nurturing community.</p>
+        <h3 class="font-semibold text-lg mb-3">Follow Us</h3>
+        <div class="flex gap-4">
+          <a href="https://www.facebook.com/profile.php?id=61575912925346" target="_blank" aria-label="Facebook"
+             class="hover:text-green-300 transition">
+            <i class="fab fa-facebook text-2xl"></i>
+          </a>
+          <a href="https://www.instagram.com/greensproutkenya" target="_blank" aria-label="Instagram"
+             class="hover:text-green-300 transition">
+            <i class="fab fa-instagram text-2xl"></i>
+          </a>
+          <a href="https://www.tiktok.com/@greensproutkenya" target="_blank" aria-label="TikTok"
+             class="hover:text-green-300 transition">
+            <i class="fab fa-tiktok text-2xl"></i>
+          </a>
+        </div>
       </div>
+    </div>
+
+    <!-- Bottom Bar -->
+    <div class="border-t border-green-800 mt-10 pt-6 text-center text-green-200 text-sm">
+      &copy; {{ new Date().getFullYear() }} Green Sprout Kenya.  
+      <span class="block md:inline">All rights reserved.</span>  
+      <br class="md:hidden"/> 🌍 Empowering nature, nurturing community.
     </div>
   </footer>
 </template>
 
 <script setup>
-import SocialLinks from '~/components/SocialLinks.vue';
+// Make sure you have Font Awesome installed for the social icons
+// npm install @fortawesome/fontawesome-free
 </script>
+
+<style>
+@import "@fortawesome/fontawesome-free/css/all.min.css";
+</style>
