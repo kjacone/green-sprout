@@ -9,7 +9,11 @@
         <p class="text-green-900 mb-4 max-w-md text-lg leading-relaxed">
           Our comprehensive guide equips teachers and students with interactive lessons, hands-on projects, and step-by-step support for growing a greener school. Start your journey today!
         </p>
-        <a href="#" class="inline-block bg-gradient-to-r from-green-600 to-green-500 text-white px-7 py-3 rounded-lg shadow-lg hover:scale-105 hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-green-400 focus:ring-offset-2 font-semibold text-base transition transform duration-150">
+        <a
+          href="/docs/Green_Sprout_Kenya_Coursebook.pdf"
+          download
+          class="inline-block bg-gradient-to-r from-green-600 to-green-500 text-white px-7 py-3 rounded-lg shadow-lg hover:scale-105 hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-green-400 focus:ring-offset-2 font-semibold text-base transition transform duration-150"
+        >
           <span class="inline-flex items-center">
             <svg class="w-5 h-5 mr-2 -ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-width="2" d="M12 5v14m7-7H5"/></svg>
             Download Course Book

@@ -22,14 +22,9 @@ export function useGallery() {
       caption: 'Volunteers caring for saplings during early growth.'
     },
     {
-      url: 'https://images.unsplash.com/photo-1465101162946-4377e57745c3',
+      url: '/images/4.jpeg',
       alt: 'School children with tree saplings',
       caption: 'School outreach: kids receiving free saplings and educational materials.'
-    },
-    {
-      url: 'https://images.unsplash.com/photo-1462478448389-cf7bfc0b2c2e',
-      alt: 'Team planting trees near river',
-      caption: 'Green Sprout team reforesting along a local river.'
     }
   ];
 

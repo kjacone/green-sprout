@@ -9,7 +9,7 @@ import DonateOptions from '~/components/DonateOptions.vue';
       <p class="text-green-900 mb-6">Every shilling counts. Your generosity plants hope in schools, empowers youth, and greens communities across Kenya. Choose a giving method below:</p>
       <DonateOptions />
       <div class="mt-6 bg-green-50 rounded-lg py-4 px-6">
-        <p class="font-semibold text-green-700">For large gifts, corporate partnerships, or foundations, email us at <a href="mailto:support@greensproutkenya.org" class="text-blue-600 underline">support@greensproutkenya.org</a>.</p>
+        <p class="font-semibold text-green-700">For large gifts, corporate partnerships, or foundations, email us at <a href="mailto:greensproutkenya@gmail.com" class="text-blue-600 underline">greensproutkenya@gmail.com</a>.</p>
       </div>
     </section>
   </main>

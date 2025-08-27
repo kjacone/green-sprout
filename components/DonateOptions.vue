@@ -10,8 +10,8 @@
         </svg>
         <h3 class="text-xl font-bold text-green-800 mb-2">M-Pesa</h3>
         <div class="mb-3 text-green-900 text-center space-y-1">
-          <div><span class="font-semibold">Paybill:</span> 123456</div>
-          <div><span class="font-semibold">Account:</span> GREENSPROUT</div>
+          <div><span class="font-semibold">Mpesa Mobile:</span> +254 111 596 189</div>
+          <!-- <div><span class="font-semibold">Account:</span> GREENSPROUT</div> -->
         </div>
         <button type="button" @click="copy('Paybill: 123456, Account: GREENSPROUT')" class="bg-green-600 hover:bg-green-700 text-white px-4 py-1 rounded transition">Copy Details</button>
       </div>
@@ -33,11 +33,11 @@
         </svg>
         <h3 class="text-xl font-bold text-yellow-800 mb-2">Bank Transfer</h3>
         <div class="mb-3 text-yellow-900 text-center space-y-1">
-          <div><span class="font-semibold">Bank:</span> Kenya Green Bank</div>
-          <div><span class="font-semibold">Account:</span> 9876543210</div>
+          <div><span class="font-semibold">Bank:</span> KCB Bank</div>
+          <div><span class="font-semibold">Account:</span> 1291722335</div>
           <div><span class="font-semibold">Branch:</span> Nairobi Central</div>
         </div>
-        <button type="button" @click="copy('Kenya Green Bank, Account: 9876543210, Branch: Nairobi Central')" class="bg-yellow-600 hover:bg-yellow-700 text-white px-4 py-1 rounded transition">Copy Details</button>
+        <button type="button" @click="copy('KCB Bank, Account: 1291722335, Branch: Nairobi Central')" class="bg-yellow-600 hover:bg-yellow-700 text-white px-4 py-1 rounded transition">Copy Details</button>
       </div>
       <!-- Buy Me a Coffee Option -->
       <div class="flex flex-col items-center bg-gradient-to-br from-orange-100 to-orange-50 rounded-xl shadow-lg p-6 hover:scale-105 transition-transform">

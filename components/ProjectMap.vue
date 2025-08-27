@@ -24,22 +24,20 @@
 
       <!-- Siaya Schools -->
       <circle cx="140" cy="160" r="10" fill="#10b981" class="animate-pulse"/>
-      <text x="155" y="165" font-size="12" fill="#064e3b" class="font-semibold">Uyoma Primary</text>
+      <text x="155" y="165" font-size="12" fill="#064e3b" class="font-semibold">Naya Primary School</text>
 
       <circle cx="150" cy="190" r="10" fill="#10b981" class="animate-pulse"/>
-      <text x="165" y="195" font-size="12" fill="#064e3b" class="font-semibold">Siaya Central School</text>
+      <text x="165" y="195" font-size="12" fill="#064e3b" class="font-semibold">Naya Secondary School</text>
 
-      <circle cx="130" cy="220" r="10" fill="#10b981" class="animate-pulse"/>
-      <text x="145" y="225" font-size="12" fill="#064e3b" class="font-semibold">Lakeview Academy</text>
     </svg>
 
     <!-- Legend -->
     <div class="bg-white dark:bg-gray-700 p-4 rounded-xl shadow-md w-full max-w-md">
       <p class="text-green-800 dark:text-green-200 font-bold mb-2">📍 Partner Schools in Siaya:</p>
       <ul class="space-y-1 text-gray-700 dark:text-gray-200">
-        <li>🌿 Uyoma Primary School</li>
-        <li>🌿 Siaya Central School</li>
-        <li>🌿 Lakeview Academy</li>
+        <li>🌿 Naya Primary School</li>
+        <li>🌿 Naya Secondary School</li>
+        
       </ul>
     </div>
   </div>
