@@ -4,4 +4,7 @@ export default defineNuxtConfig({
   pages: true,
   devtools: { enabled: true },
   modules: ["@nuxtjs/tailwindcss"],
+  build: {
+    transpile: ['@plasmicapp/loader-vue', /* maybe others like loader-core */],
+  },
 });

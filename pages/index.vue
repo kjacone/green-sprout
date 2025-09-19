@@ -1,5 +1,5 @@
-<template>
-  <main class="min-h-screen bg-gradient-to-b from-slate-50 to-white">
+<template >
+  <main class="min-h-screen dark:bg-gray-900">
     <!-- Hero Section: visually striking intro -->
     <section 
       aria-label="Homepage hero" 
@@ -15,6 +15,7 @@
       <div class="relative z-10">
         <HeroSection />
          <MissionStatement />
+         <Leafy />
       </div>
     </section>
 
@@ -22,12 +23,12 @@
     <section 
       aria-label="Quick actions" 
       role="region" 
-      class="mt-20 px-4"
+      class="mt-20 px-4 dark:bg-gray-900 dark:text-gray-100"
     >
       <div class="max-w-6xl mx-auto">
         <div class="text-center mb-12">
-          <h2 class="text-3xl font-bold text-gray-900 mb-4">Take Action Today</h2>
-          <div class="w-24 h-1 bg-gradient-to-r from-emerald-500 to-sky-500 mx-auto rounded-full"></div>
+          <h2 class="text-3xl font-bold text-gray-900 dark:text-white mb-4">Take Action today</h2>
+          <div class="w-24 h-1 bg-gradient-to-r from-emerald-500 to-sky-500 dark:bg-gradient-to-r from-emerald-600 to-sky-600 mx-auto rounded-full"></div>
         </div>
         <QuickButtons />
       </div>
@@ -36,13 +37,13 @@
     <section 
       aria-label="Gallery preview" 
       role="region" 
-      class="mt-24 max-w-7xl mx-auto px-4"
+      class="mt-24 max-w-7xl mx-auto px-4 dark:bg-gray-900 dark:text-gray-100"
     >
       <div class="text-center mb-16">
         <h2 class="text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-emerald-600 via-green-600 to-indigo-600 mb-6 drop-shadow-lg">
           Our Impact in Action
         </h2>
-        <p class="text-xl text-gray-700 max-w-3xl mx-auto mb-4">
+        <p class="text-xl text-gray-700 dark:text-gray-400 max-w-3xl mx-auto mb-4">
           See the difference we're making in communities around the world
         </p>
         <div class="w-32 h-1 bg-gradient-to-r from-emerald-500 via-green-500 to-indigo-500 mx-auto mt-6 rounded-full"></div>
@@ -54,7 +55,7 @@
         <div class="absolute -bottom-12 right-0 w-40 h-40 bg-green-100 rounded-full mix-blend-multiply filter blur-2xl opacity-40 animate-float" style="animation-delay: 2s"></div>
         <div class="absolute top-1/2 left-1/2 w-24 h-24 bg-indigo-100 rounded-full mix-blend-multiply filter blur-2xl opacity-30 animate-float" style="animation-delay: 4s"></div>
 
-        <div class="bg-white/90 backdrop-blur-md rounded-3xl shadow-2xl shadow-gray-200/50 p-8 border border-gray-100 relative z-10">
+        <div class="dark:bg-gray-900 backdrop-blur-md rounded-3xl shadow-2xl shadow-gray-200/50 dark:shadow-gray-900/50 p-8 border border-gray-100 dark:border-gray-800 relative z-10">
           <Gallery :preview="true" :count="4" />
           <div class="mt-8 flex justify-center gap-4">
             <NuxtLink 
@@ -75,19 +76,19 @@
     <section 
       aria-label="Latest blog entries" 
       role="region" 
-      class="mt-28 max-w-6xl mx-auto px-4"
+      class="mt-28 max-w-6xl mx-auto px-4 dark:bg-gray-900 dark:text-gray-300"
     >
       <div class="text-center mb-16">
-         <h2 class="text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-emerald-600 via-green-600 to-indigo-600 mb-6 drop-shadow-lg">
+         <h2 class="text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-emerald-600 via-green-600 to-indigo-600 dark:bg-gradient-to-r from-emerald-700 via-green-700 to-indigo-700 mb-6 drop-shadow-lg">
           Latest Stories</h2>
-        <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+        <p class="text-xl text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
           Read about recent developments, success stories, and important updates from our mission
         </p>
-         <div class="w-32 h-1 bg-gradient-to-r from-emerald-500 via-green-500 to-indigo-500 mx-auto mt-6 rounded-full"></div>
+         <div class="w-32 h-1 bg-gradient-to-r from-emerald-500 via-green-500 to-indigo-500 dark:bg-gradient-to-r from-emerald-600 via-green-600 to-indigo-600 mx-auto mt-6 rounded-full"></div>
       </div>
       
       <div class="relative">
-        <div class="bg-gradient-to-br from-white to-gray-50 rounded-3xl shadow-xl shadow-gray-200/30 p-8 border border-gray-100">
+        <div class="dark:bg-gray-900 bg-gradient-to-r  rounded-3xl p-8 border border-gray-100 dark:border-gray-900">
           <BlogPreview :preview="true" :count="3" />
         </div>
       </div>
@@ -97,7 +98,7 @@
     <section 
       aria-label="Newsletter signup" 
       role="region" 
-      class="mt-24 px-4"
+      class="mt-24 px-4 dark:bg-gray-900 dark:text-gray-100"
     >
       <div class="max-w-4xl mx-auto">
         <div class="bg-gradient-to-r from-emerald-600 via-green-600 to-indigo-600 rounded-3xl p-12 text-center text-white shadow-2xl shadow-gray-300/50 relative overflow-hidden">
@@ -130,12 +131,12 @@
     <section 
       aria-label="Take action" 
       role="region" 
-      class="mt-28 mb-5 px-4"
+      class="mt-28 py-12 px-4 dark:bg-gray-900 dark:text-gray-100"
     >
       <div class="max-w-4xl mx-auto text-center">
         <div class="mb-12">
-          <h2 class="text-4xl font-bold text-gray-900 mb-6">Ready to Make a Difference?</h2>
-          <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+          <h2 class="text-4xl font-bold text-gray-900 dark:text-white mb-6">Ready to Make a Difference?</h2>
+          <p class="text-xl text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
             Every contribution matters. Join us in creating positive change that lasts.
           </p>
         </div>
@@ -143,37 +144,37 @@
         <div class="flex flex-col sm:flex-row gap-6 justify-center items-center">
           <NuxtLink 
             to="/donate" 
-            class="group relative inline-flex items-center justify-center px-10 py-4 bg-gradient-to-r from-emerald-600 to-emerald-700 text-white rounded-2xl font-semibold shadow-xl shadow-emerald-200/50 hover:shadow-2xl hover:shadow-emerald-300/50 transform hover:-translate-y-2 transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-emerald-300 focus:ring-offset-2 text-lg min-w-[200px]"
+            class="group relative inline-flex items-center justify-center px-10 py-4 bg-gradient-to-r from-emerald-600 to-emerald-700 text-white rounded-2xl font-semibold shadow-xl shadow-emerald-200/50 hover:shadow-2xl hover:shadow-emerald-300/50 transform hover:-translate-y-2 transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-emerald-300 focus:ring-offset-2 text-lg min-w-[200px] dark:bg-gradient-to-r from-emerald-500 to-emerald-600 dark:text-white"
           >
             <span class="absolute inset-0 bg-gradient-to-r from-emerald-500 to-emerald-600 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
             <span class="relative flex items-center gap-2">
-              💚 Donate Now
+              Donate Now
             </span>
           </NuxtLink>
           
           <NuxtLink 
             to="/join-the-movement" 
-            class="group relative inline-flex items-center justify-center px-10 py-4 bg-gradient-to-r from-sky-600 to-indigo-600 text-white rounded-2xl font-semibold shadow-xl shadow-sky-200/50 hover:shadow-2xl hover:shadow-sky-300/50 transform hover:-translate-y-2 transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-sky-300 focus:ring-offset-2 text-lg min-w-[200px]"
+            class="group relative inline-flex items-center justify-center px-10 py-4 bg-gradient-to-r from-sky-600 to-indigo-600 text-white rounded-2xl font-semibold shadow-xl shadow-sky-200/50 hover:shadow-2xl hover:shadow-sky-300/50 transform hover:-translate-y-2 transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-sky-300 focus:ring-offset-2 text-lg min-w-[200px] dark:bg-gradient-to-r from-sky-500 to-indigo-500 dark:text-white"
           >
             <span class="absolute inset-0 bg-gradient-to-r from-sky-500 to-indigo-500 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
             <span class="relative flex items-center gap-2">
-              🤝 Volunteer With Us
+              Volunteer With Us
             </span>
           </NuxtLink>
         </div>
         
         <!-- Additional encouragement -->
-        <div class="mt-12 flex flex-col sm:flex-row gap-8 justify-center items-center text-gray-600">
+        <div class="mt-12 flex flex-col sm:flex-row gap-8 justify-center items-center text-gray-600 dark:text-gray-400">
           <div class="flex items-center gap-2">
-            <div class="w-2 h-2 bg-emerald-500 rounded-full"></div>
+            <div class="w-2 h-2 bg-emerald-500 rounded-full dark:bg-emerald-600"></div>
             <span>Tax-deductible donations</span>
           </div>
           <div class="flex items-center gap-2">
-            <div class="w-2 h-2 bg-sky-500 rounded-full"></div>
+            <div class="w-2 h-2 bg-sky-500 rounded-full dark:bg-sky-600"></div>
             <span>Flexible volunteering</span>
           </div>
           <div class="flex items-center gap-2">
-            <div class="w-2 h-2 bg-indigo-500 rounded-full"></div>
+            <div class="w-2 h-2 bg-indigo-500 rounded-full dark:bg-indigo-600"></div>
             <span>Immediate impact</span>
           </div>
         </div>
@@ -188,6 +189,7 @@ import MissionStatement from '~/components/MissionStatement.vue';
 import QuickButtons from '~/components/QuickButtons.vue';
 import Gallery from '~/components/Gallery.vue';
 import BlogPreview from '~/components/BlogPreview.vue';
+import Leafy from '~/components/Leafy.vue';
 </script>
 
 <style scoped>

@@ -34,7 +34,7 @@ function closePopup() {
 </script>
 
 <template>
-  <div class="relative">
+  <div class="relative dark:bg-gray-800">
     <!-- Gallery Grid -->
     <div
       class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4"
@@ -43,7 +43,7 @@ function closePopup() {
       <figure
         v-for="(img, idx) in displayedImages"
         :key="img.url"
-        class="rounded-lg overflow-hidden bg-green-100 shadow-sm cursor-pointer"
+        class="rounded-lg overflow-hidden bg-green-100 dark:bg-gray-700 shadow-sm cursor-pointer"
         @click="openPopup(img)"
       >
         <img
@@ -52,7 +52,7 @@ function closePopup() {
           class="object-cover w-full h-32 sm:h-40 transition-transform hover:scale-105"
           loading="lazy"
         />
-        <figcaption class="p-2 text-xs text-green-700 text-center">
+        <figcaption class="p-2 text-xs text-green-700 dark:text-gray-300 text-center">
           {{ img.caption }}
         </figcaption>
       </figure>
@@ -61,20 +61,20 @@ function closePopup() {
     <!-- Popup Modal -->
     <div
       v-if="showPopup && selectedImage"
-      class="fixed inset-0 bg-black/80 flex items-center justify-center z-50"
+      class="fixed inset-0 bg-black/80 dark:bg-gray-900/80 flex items-center justify-center z-50"
       @click.self="closePopup"
     >
-      <div class="bg-white rounded-lg max-w-3xl w-full shadow-lg overflow-hidden">
+      <div class="bg-white dark:bg-gray-800 rounded-lg max-w-3xl w-full shadow-lg overflow-hidden">
         <img
           :src="selectedImage.url"
           :alt="selectedImage.alt"
-          class="w-full max-h-[70vh] object-contain bg-black"
+          class="w-full max-h-[70vh] object-contain bg-black dark:bg-gray-800"
         />
         <div class="p-4 text-center">
-          <p class="text-gray-700 text-sm">{{ selectedImage.caption }}</p>
+          <p class="text-gray-700 dark:text-gray-300 text-sm">{{ selectedImage.caption }}</p>
           <button
             @click="closePopup"
-            class="mt-3 px-4 py-2 bg-green-600 text-white rounded-lg hover:bg-green-700 transition"
+            class="mt-3 px-4 py-2 bg-green-600 dark:bg-green-700 text-white rounded-lg hover:bg-green-700 dark:hover:bg-green-800 transition"
           >
             Close
           </button>

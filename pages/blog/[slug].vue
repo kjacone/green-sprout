@@ -28,12 +28,12 @@ onMounted(async () => {
 </script>
 
 <template>
-  <div class="p-6 max-w-3xl mx-auto">
-    <div v-if="loading" class="text-gray-500">Loading blog post...</div>
-    <div v-else-if="error" class="text-red-500">{{ error }}</div>
+  <div class="p-6 max-w-3xl mx-auto dark:bg-gray-800">
+    <div v-if="loading" class="text-gray-500 dark:text-gray-300">Loading blog post...</div>
+    <div v-else-if="error" class="text-red-500 dark:text-red-300">{{ error }}</div>
     <div v-else-if="post">
-      <h1 class="text-3xl font-bold text-green-700 mb-3">{{ post.title }}</h1>
-      <p class="text-sm text-gray-500 mb-6">
+      <h1 class="text-3xl font-bold text-green-700 dark:text-green-300 mb-3">{{ post.title }}</h1>
+      <p class="text-sm text-gray-500 dark:text-gray-300 mb-6">
         By {{ post.author }} • {{ new Date(post.date).toDateString() }}
       </p>
       <!-- Render Blogger HTML safely -->

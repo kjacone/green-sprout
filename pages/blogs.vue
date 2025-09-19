@@ -10,9 +10,9 @@
       class="mt-28 max-w-6xl mx-auto px-4"
     >
      <div class="text-center mb-16">
-         <h2 class="text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-emerald-600 via-green-600 to-indigo-600 mb-6 drop-shadow-lg">
+         <h2 class="text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-emerald-600 via-green-600 to-indigo-600 dark:bg-gradient-to-r from-emerald-700 via-green-700 to-indigo-700 mb-6 drop-shadow-lg">
           Latest Stories</h2>
-        <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+        <p class="text-xl text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
           Read about recent developments, success stories, and important updates from our mission
         </p>
          <div class="w-32 h-1 bg-gradient-to-r from-emerald-500 via-green-500 to-indigo-500 mx-auto mt-6 rounded-full"></div>

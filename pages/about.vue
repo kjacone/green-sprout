@@ -6,7 +6,7 @@ import CourseBookSection from '~/components/CourseBookSection.vue';
 </script>
 
 <template>
-  <main class="max-w-4xl mx-auto px-4 py-10">
+  <main class="max-w-4xl mx-auto px-4 py-10 dark:bg-gray-900">
     <section class="mb-12">
       <AboutStory />
     </section>
