@@ -45,6 +45,11 @@ const setSEO = (post: any) => {
       { property: 'og:title', content: seo.description },
       { property: 'og:description', content: seo.description },
       { property: 'og:image', content: seo.image },
+        { property: 'og:image', content: seo.image },
+      { property: 'og:image:secure_url', content: seo.image }, // Important for HTTPS
+      { property: 'og:image:width', content: '1200' }, // Recommended: 1200x630
+      { property: 'og:image:height', content: '630' },
+      { property: 'og:image:alt', content: post.value.title || 'Blog Post' },
       { property: 'og:url', content: seo.url },
       { name: 'twitter:title', content: seo.description },
       { name: 'twitter:description', content: seo.description },
