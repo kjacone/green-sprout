@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { useRoute } from 'vue-router';
-import { ref, onMounted } from 'vue';
+import { ref, onMounted, computed } from 'vue';
 
 const route = useRoute();
 const slug = route.params.slug as string;
@@ -8,6 +8,27 @@ const slug = route.params.slug as string;
 const post = ref<any>(null);
 const loading = ref(false);
 const error = ref<string | null>(null);
+
+// Extract first image URL from HTML content
+const extractFirstImage = (htmlContent: string): string | null => {
+  if (!htmlContent) return null;
+  
+  // Match img src attribute
+  const imgRegex = /<img[^>]+src=["']([^"']+)["']/i;
+  const match = htmlContent.match(imgRegex);
+  
+  return match ? match[1] : null;
+};
+
+// Computed property for the cover image
+const coverImage = computed(() => {
+  if (!post.value) return 'https://www.greensprout.club/images/logo.jpeg';
+  
+  // Try to get from coverUrl first, then extract from content
+  return post.value.coverUrl || 
+         extractFirstImage(post.value.content) || 
+         'https://www.greensprout.club/images/logo.jpeg';
+});
 
 onMounted(async () => {
   loading.value = true;
@@ -19,6 +40,7 @@ onMounted(async () => {
       error.value = data.error;
     } else {
       post.value = data;
+      console.log(JSON.stringify(data), data);
     }
   } catch (e: any) {
     error.value = e.message || 'Something went wrong';
@@ -27,26 +49,22 @@ onMounted(async () => {
   }
 });
 
-
 // SEO tags for individual post
-useHead({
+useHead(() => ({
   title: post.value?.title,
   meta: [
     { name: 'description', content: post.value?.excerpt },
     { property: 'og:title', content: post.value?.title },
     { property: 'og:description', content: post.value?.excerpt },
-    { property: 'og:image', content: post.value?.coverUrl || 'https://www.greensprout.club/images/logo.jpeg' },
+    { property: 'og:image', content: coverImage.value },
     { property: 'og:url', content: `https://www.greensprout.club/blog/${slug}` },
-
-   
     { name: 'twitter:title', content: post.value?.title },
     { name: 'twitter:description', content: post.value?.excerpt },
-    { name: 'twitter:image', content: post.value?.coverUrl || 'https://www.greensprout.club/images/logo.jpeg' },
-    //  { name: 'twitter:card', content: post.value?.coverUrl || '/logo.jpeg' },
-    { name: 'twitter:url', content: `https://www.greensprout.club/blog/${slug}`},
-    
+    { name: 'twitter:image', content: coverImage.value },
+    { name: 'twitter:card', content: 'summary_large_image' },
+    { name: 'twitter:url', content: `https://www.greensprout.club/blog/${slug}` },
   ],
-});
+}));
 </script>
 
 <template>
@@ -59,7 +77,7 @@ useHead({
         By {{ post.author }} • {{ new Date(post.date).toDateString() }}
       </p>
       <!-- Render Blogger HTML safely -->
-      <div class="prose max-w-none" v-html="post.content"></div>
+      <div class="prose max-w-none dark:prose-invert" v-html="post.content"></div>
     </div>
   </div>
 </template>

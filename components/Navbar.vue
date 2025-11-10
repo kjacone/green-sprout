@@ -15,7 +15,7 @@
             <div class="flex flex-col">
               
               <span class="text-2xl font-bold bg-gradient-to-r from-emerald-700 via-emerald-600 to-emerald-800 bg-clip-text text-transparent dark:bg-gradient-to-r from-emerald-500 via-emerald-400 to-emerald-300 dark:bg-clip-text dark:text-transparent">
-                GreenSproutKenya
+                GreenSprout Kenya
               </span>
               <span class="text-xs text-emerald-600 dark:text-emerald-400 text-center font-medium tracking-wide">
                 Making a Difference
