@@ -35,14 +35,14 @@ useHead({
     { name: 'description', content: post.value?.excerpt },
     { property: 'og:title', content: post.value?.title },
     { property: 'og:description', content: post.value?.excerpt },
-    { property: 'og:image', content: post.value?.coverUrl || '/logo.jpeg' },
+    { property: 'og:image', content: post.value?.coverUrl || 'https://www.greensprout.club/images/logo.jpeg' },
     { property: 'og:url', content: `https://www.greensprout.club/blog/${slug}` },
 
    
     { name: 'twitter:title', content: post.value?.title },
     { name: 'twitter:description', content: post.value?.excerpt },
-    { name: 'twitter:image', content: post.value?.coverUrl || '/logo.jpeg' },
-     { name: 'twitter:card', content: post.value?.coverUrl || '/logo.jpeg' },
+    { name: 'twitter:image', content: post.value?.coverUrl || 'https://www.greensprout.club/images/logo.jpeg' },
+    //  { name: 'twitter:card', content: post.value?.coverUrl || '/logo.jpeg' },
     { name: 'twitter:url', content: `https://www.greensprout.club/blog/${slug}`},
     
   ],

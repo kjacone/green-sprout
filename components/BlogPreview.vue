@@ -22,7 +22,7 @@ const displayedPosts = computed(() => {
 const generateSEO = (post: any) => {
   const metaTitle = post.title;
   const metaDescription = post.title || 'Find out how Greensprout is changing the ecosystem in Kenya';
-  const metaImage = post.coverUrl || 'https://www.shutterstock.com/image-vector/default-ui-image-placeholder-wireframes-600nw-1037719192.jpg'; 
+  const metaImage = post.coverUrl || 'https://www.greensprout.club/images/4.jpeg'; 
 
   return {
     title: metaTitle,
@@ -49,7 +49,7 @@ const setSEO = (post: any) => {
       { name: 'twitter:title', content: seo.title },
       { name: 'twitter:description', content: seo.description },
       { name: 'twitter:image', content: seo.image },
-      { name: 'twitter:card', content:seo.image },
+      // { name: 'twitter:card', content:seo.image },
     ],
   });
 };
