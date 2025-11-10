@@ -42,11 +42,11 @@ const setSEO = (post: any) => {
     title: seo.title,
     meta: [
       { name: 'description', content: seo.description },
-      { property: 'og:title', content: seo.title },
+      { property: 'og:title', content: seo.description },
       { property: 'og:description', content: seo.description },
       { property: 'og:image', content: seo.image },
       { property: 'og:url', content: seo.url },
-      { name: 'twitter:title', content: seo.title },
+      { name: 'twitter:title', content: seo.description },
       { name: 'twitter:description', content: seo.description },
       { name: 'twitter:image', content: seo.image },
       // { name: 'twitter:card', content:seo.image },

@@ -1,6 +1,7 @@
 <script setup lang="ts">
-import { useRoute } from 'vue-router';
+import { useRoute } from 'vue-router'; // Make sure useHead is imported
 import { ref, onMounted, computed } from 'vue';
+import { useHead } from '@vueuse/head';
 
 const route = useRoute();
 const slug = route.params.slug as string;
@@ -49,22 +50,31 @@ onMounted(async () => {
   }
 });
 
-// SEO tags for individual post
-useHead(() => ({
-  title: post.value?.title,
-  meta: [
-    { name: 'description', content: post.value?.excerpt },
-    { property: 'og:title', content: post.value?.title },
-    { property: 'og:description', content: post.value?.excerpt },
-    { property: 'og:image', content: coverImage.value },
-    { property: 'og:url', content: `https://www.greensprout.club/blog/${slug}` },
-    { name: 'twitter:title', content: post.value?.title },
-    { name: 'twitter:description', content: post.value?.excerpt },
-    { name: 'twitter:image', content: coverImage.value },
-    { name: 'twitter:card', content: 'summary_large_image' },
-    { name: 'twitter:url', content: `https://www.greensprout.club/blog/${slug}` },
-  ],
-}));
+// SEO tags for individual post - only set when post is loaded
+useHead(() => {
+  if (!post.value) {
+    return {
+      title: 'Loading...',
+      meta: []
+    };
+  }
+  
+  return {
+    title: post.value.title || 'Blog Post',
+    meta: [
+      { name: 'description', content: post.value.excerpt || '' },
+      { property: 'og:title', content: post.value.title || 'Blog Post' },
+      { property: 'og:description', content: post.value.excerpt || '' },
+      { property: 'og:image', content: coverImage.value },
+      { property: 'og:url', content: `https://www.greensprout.club/blog/${slug}` },
+      { property: 'og:type', content: 'article' },
+      { name: 'twitter:title', content: post.value.title || 'Blog Post' },
+      { name: 'twitter:description', content: post.value.excerpt || '' },
+      { name: 'twitter:image', content: coverImage.value },
+      { name: 'twitter:card', content: 'summary_large_image' },
+    ],
+  };
+});
 </script>
 
 <template>
