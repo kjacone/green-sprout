@@ -22,7 +22,7 @@ export function useBlog() {
       const response = await fetch('/api/blog');
       if (!response.ok) throw new Error('Could not fetch blog posts');
       const data = await response.json();
-// console.log("posts", data);
+console.log("posts", data);
       posts.value = Array.isArray(data) ? data : [];
     } catch (e: any) {
       error.value = e.message || 'An error occurred.';

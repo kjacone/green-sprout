@@ -12,7 +12,8 @@ const error = ref<string | null>(null);
 onMounted(async () => {
   loading.value = true;
   try {
-    const res = await fetch(`/api/blog/${slug}`);
+    const postId = slug.split('-')[0];
+    const res = await fetch(`/api/blog/${postId}`);
     const data = await res.json();
     if (data.error) {
       error.value = data.error;
