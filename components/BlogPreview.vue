@@ -49,7 +49,7 @@ const setSEO = (post: any) => {
       { name: 'twitter:title', content: seo.title },
       { name: 'twitter:description', content: seo.description },
       { name: 'twitter:image', content: seo.image },
-      { name: 'twitter:card', content: 'summary_large_image' },
+      { name: 'twitter:card', content:seo.image },
     ],
   });
 };

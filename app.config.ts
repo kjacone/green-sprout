@@ -1,8 +1,9 @@
 export default defineAppConfig({
   seo: {
     siteName: 'GreenSprout Kenya Club',
-    description: 'Read sustainable enviromental and eco-friendly innovation stories.',
+    description: '	At Green Sprout Kenya, we believe that every seed planted is a promise to the future. By working hand-in-hand with schools, youth, and communities, we restore our environment, nurture resilience, and grow hope—one tree at a time.',
     image: '/logo.jpeg',
-    url: 'https://greensprout.club',
+    imageLarge: '/4.jpeg',
+    url: 'https://www.greensprout.club/',
   },
 });
