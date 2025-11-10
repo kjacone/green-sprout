@@ -26,6 +26,22 @@ onMounted(async () => {
     loading.value = false;
   }
 });
+
+
+// SEO tags for individual post
+useHead({
+  title: post.value?.title,
+  meta: [
+    { name: 'description', content: post.value?.excerpt },
+    { property: 'og:title', content: post.value?.title },
+    { property: 'og:description', content: post.value?.excerpt },
+    { property: 'og:image', content: post.value?.coverImage || '/logo.jpeg' },
+    { property: 'og:url', content: `https://greensprout.club/blog/${slug}` },
+    { name: 'twitter:title', content: post.value?.title },
+    { name: 'twitter:description', content: post.value?.excerpt },
+    { name: 'twitter:image', content: post.value?.coverImage || '/logo.jpeg' },
+  ],
+});
 </script>
 
 <template>

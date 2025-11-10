@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { useBlog } from '~/composables/useBlog';
-// import { useHead } from '@vueuse/head';
+import { useHead } from '@vueuse/head';
 
 const { posts, loading, error } = useBlog();
 
@@ -21,8 +21,8 @@ const displayedPosts = computed(() => {
 // Function to generate SEO meta tags
 const generateSEO = (post: any) => {
   const metaTitle = post.title;
-  const metaDescription = post.excerpt || 'Default description for SEO if excerpt is missing';
-  const metaImage = post.coverImage || post.image || 'https://www.shutterstock.com/image-vector/default-ui-image-placeholder-wireframes-600nw-1037719192.jpg'; // Add cover image support
+  const metaDescription = post.title || 'Find out how Greensprout is changing the ecosystem in Kenya';
+  const metaImage = post.coverUrl || 'https://www.shutterstock.com/image-vector/default-ui-image-placeholder-wireframes-600nw-1037719192.jpg'; 
 
   return {
     title: metaTitle,
